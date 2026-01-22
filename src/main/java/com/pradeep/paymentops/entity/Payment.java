@@ -1,4 +1,6 @@
 package com.pradeep.paymentops.entity;
+import jakarta.persistence.Version;
+import java.time.OffsetDateTime;
 
 
 import jakarta.persistence.*;
@@ -35,5 +37,15 @@ public class Payment {
 
     @Column(name = "created_at", nullable = false)
     private OffsetDateTime createdAt;
+
+
+    @Version
+    private long version;
+
+    @Column(name = "updated_at", nullable = false)
+    private OffsetDateTime updatedAt;
+
+
+
 }
 
